@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    networker.cpp
+    networker.cpp \
+    basic_info.cpp
 
 HEADERS  += mainwindow.h \
-    networker.h
+    networker.h \
+    basic_info.h
 
 FORMS    +=
 
