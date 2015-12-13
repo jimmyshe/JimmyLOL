@@ -8,6 +8,14 @@ basic_info::basic_info()
     profileIconId = new int;
 }
 
+basic_info::~basic_info()
+{
+    delete summonerid;
+    delete summonerLevel;
+    delete profileIconId;
+    delete summonername;
+}
+
 void basic_info::setid(const long &data)
 {
     *summonerid = data;
