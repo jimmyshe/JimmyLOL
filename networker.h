@@ -2,16 +2,33 @@
 #define NETWORKER_H
 
 #include <QObject>
+#include <QString>
+#include <QNetworkAccessManager>
+#include <QUrl>
+#include <QNetworkRequest>
+#include <QNetworkReply>
 
-class Networker : public QObject
+
+class QNetworkReply;
+
+class NetWorker : public QObject
 {
     Q_OBJECT
 public:
-    explicit Networker(QObject *parent = 0);
+    static NetWorker * instance();
+    ~NetWorker();
 
+    void get(const QString &url);
 signals:
+    void finished(QNetworkReply *reply);
+private:
+    class Private;
+    friend class Private;
+    Private *d;
 
-public slots:
+    explicit NetWorker(QObject *parent = 0);
+    NetWorker(const NetWorker &) Q_DECL_EQ_DELETE;
+    NetWorker& operator=(NetWorker rhs) Q_DECL_EQ_DELETE;
 };
 
 #endif // NETWORKER_H

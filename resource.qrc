@@ -1,2 +1,39 @@
-<RCC/>
-
+<RCC>
+    <qresource prefix="/icons/tire">
+        <file>resource/tier-icons/tier_icons/bronze_i.png</file>
+        <file>resource/tier-icons/tier_icons/bronze_ii.png</file>
+        <file>resource/tier-icons/tier_icons/bronze_iii.png</file>
+        <file>resource/tier-icons/tier_icons/bronze_iv.png</file>
+        <file>resource/tier-icons/tier_icons/bronze_v.png</file>
+        <file>resource/tier-icons/tier_icons/diamond_i.png</file>
+        <file>resource/tier-icons/tier_icons/diamond_ii.png</file>
+        <file>resource/tier-icons/tier_icons/diamond_iii.png</file>
+        <file>resource/tier-icons/tier_icons/diamond_iv.png</file>
+        <file>resource/tier-icons/tier_icons/diamond_v.png</file>
+        <file>resource/tier-icons/tier_icons/gold_i.png</file>
+        <file>resource/tier-icons/tier_icons/gold_ii.png</file>
+        <file>resource/tier-icons/tier_icons/gold_iii.png</file>
+        <file>resource/tier-icons/tier_icons/gold_iv.png</file>
+        <file>resource/tier-icons/tier_icons/gold_v.png</file>
+        <file>resource/tier-icons/tier_icons/platinum_i.png</file>
+        <file>resource/tier-icons/tier_icons/platinum_ii.png</file>
+        <file>resource/tier-icons/tier_icons/platinum_iii.png</file>
+        <file>resource/tier-icons/tier_icons/platinum_iv.png</file>
+        <file>resource/tier-icons/tier_icons/platinum_v.png</file>
+        <file>resource/tier-icons/tier_icons/silver_i.png</file>
+        <file>resource/tier-icons/tier_icons/silver_ii.png</file>
+        <file>resource/tier-icons/tier_icons/silver_iii.png</file>
+        <file>resource/tier-icons/tier_icons/silver_iv.png</file>
+        <file>resource/tier-icons/tier_icons/silver_v.png</file>
+    </qresource>
+    <qresource prefix="/icons/base_tier">
+        <file>resource/tier-icons/base_icons/bronze.png</file>
+        <file>resource/tier-icons/base_icons/challenger.png</file>
+        <file>resource/tier-icons/base_icons/diamond.png</file>
+        <file>resource/tier-icons/base_icons/gold.png</file>
+        <file>resource/tier-icons/base_icons/master.png</file>
+        <file>resource/tier-icons/base_icons/platinum.png</file>
+        <file>resource/tier-icons/base_icons/provisional.png</file>
+        <file>resource/tier-icons/base_icons/silver.png</file>
+    </qresource>
+</RCC>
