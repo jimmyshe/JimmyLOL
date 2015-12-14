@@ -12,6 +12,14 @@ public:
     QNetworkAccessManager *manager;
 };
 
+NetWorker *NetWorker::instance()
+{
+    static NetWorker netWorker;
+    return &netWorker;
+}
+
+
+
 
 NetWorker::NetWorker(QObject *parent) :
     QObject(parent),
@@ -36,8 +44,4 @@ void NetWorker::get(const QString &url)
 
 
 
-NetWorker *NetWorker::instance()
-{
-    static NetWorker netWorker;
-    return &netWorker;
-}
+

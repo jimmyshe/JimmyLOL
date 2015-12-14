@@ -1,21 +1,11 @@
 #include "mainwindow.h"
 
-#include <QComboBox>
-#include <QHBoxLayout>
-#include <QLabel>
-#include <QLineEdit>
-#include <QPushButton>
-
-
-
-
-
-
 
 
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent)
+    QMainWindow(parent),
+    d(new MainWindow::Private)
 {
 
     QComboBox *serverList = new QComboBox(this);
@@ -38,18 +28,32 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowTitle(tr("JimmyLOL"));
 
 
-    connect(d->netWorker, &NetWorker::finished, [=] (QNetworkReply *reply) {
+    connect(d->netWorker, &NetWorker::finished, [=] (QNetworkReply *reply)
+    {
         qDebug() << reply;
+        QJsonParseError error;
+        QJsonDocument jsonDocument = QJsonDocument::fromJson(reply->readAll(), &error);
+                if (error.error == QJsonParseError::NoError) {
+                    if (!(jsonDocument.isNull() || jsonDocument.isEmpty()) && jsonDocument.isObject()) {
+
+                    }
+                } else {
+                   // qDebug()<<"erro";
+                    QMessageBox::critical(this, tr("Error"), error.errorString());
+                }
+        reply->deleteLater();
     });
 
-    /*
+
     connect(refreshButton, &QPushButton::clicked, [=] () {
         d->fetchBasicinfo(summonerName->text(),serverList->itemData(serverList->currentIndex()).toString(),QString("3c58893b-0bb4-4e41-a32a-6089f0b0b315"));
-    });*/
+    });
 }
 
 
 MainWindow::~MainWindow()
 {
 
+    delete d;
+    d = 0;
 }
