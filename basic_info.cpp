@@ -21,7 +21,7 @@ void basic_info::setid(long &data)
     *summonerid = data;
 }
 
-long basic_info::id()
+double basic_info::id()
 {
     return *summonerid;
 }
@@ -41,7 +41,7 @@ void basic_info::setic(long &data)
     *profileIconId = data;
 }
 
-long basic_info::ic()
+double basic_info::ic()
 {
     return *profileIconId;
 }
@@ -51,7 +51,7 @@ void basic_info::setlv( long &data)
     *summonerLevel = data;
 }
 
-long basic_info::lv()
+double basic_info::lv()
 {
     return *summonerLevel;
 }

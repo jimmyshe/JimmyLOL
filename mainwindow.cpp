@@ -39,13 +39,13 @@ MainWindow::MainWindow(QWidget *parent) :
                     if (!(jsonDocument.isNull() || jsonDocument.isEmpty()) && jsonDocument.isObject()) {
                         QVariantMap result = jsonDocument.toVariant().toMap();
                         qDebug()<<result;
+                        result = result.
 
-                        /*
-                        summoner_basic_info.setname(result["name"].toString());
-                        summoner_basic_info.setic(result["profileIconId"].toInt());
-                        summoner_basic_info.setid(result["id"].toLongLong());
-                        summoner_basic_info.setlv(result["id"].toLongLong());
-                        qDebug() << summoner_basic_info; */
+
+
+
+
+
 
                     }
                 } else {

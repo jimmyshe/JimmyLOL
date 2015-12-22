@@ -11,22 +11,22 @@ public:
 
 
     void setid(long &data);
-    long id();
+    double id();
 
     void setname(QString data);
     QString name();
 
     void setic(long &data);
-    long ic();
+    double ic();
 
     void setlv(long &data);
-    long lv();
+    double lv();
 
  private:
-    long* summonerid;
+    double* summonerid;
     QString* summonername;
-    int* profileIconId;
-    long* summonerLevel;
+    double* profileIconId;
+    double* summonerLevel;
 };
 
 
