@@ -10,17 +10,17 @@ public:
 
 
 
-    void setid(const long &data);
-    long id() const;
+    void setid(long &data);
+    long id();
 
-    void setname(const QString &data);
+    void setname(QString data);
     QString name();
 
-    void setic(const long &data);
-    long ic() const;
+    void setic(long &data);
+    long ic();
 
-    void setilv(const long &data);
-    long lv() const;
+    void setlv(long &data);
+    long lv();
 
  private:
     long* summonerid;
@@ -30,7 +30,7 @@ public:
 };
 
 
-QDebug operator <<(QDebug dbg, const basic_info &w);
+QDebug operator << (QDebug dbg, basic_info b);
 
 
 

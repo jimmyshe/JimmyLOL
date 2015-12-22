@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
     d(new MainWindow::Private)
 {
 
+    basic_info summoner_basic_info;
+
     QComboBox *serverList = new QComboBox(this);
     serverList->addItem(tr("北美"), QLatin1String("na"));
     QLineEdit *summonerName = new QLineEdit(tr("输入召唤师名"), this);
@@ -35,6 +37,18 @@ MainWindow::MainWindow(QWidget *parent) :
         QJsonDocument jsonDocument = QJsonDocument::fromJson(reply->readAll(), &error);
                 if (error.error == QJsonParseError::NoError) {
                     if (!(jsonDocument.isNull() || jsonDocument.isEmpty()) && jsonDocument.isObject()) {
+                        QVariantMap result = jsonDocument.toVariant().toMap();
+                        qDebug()<<result;
+                        qDebug()<<result["name"];
+                        qDebug()<<result["profileIconId"].toInt();
+                        qDebug()<<result["id"].toLongLong();
+                        qDebug()<<result["id"].toLongLong();
+                        /*
+                        summoner_basic_info.setname(result["name"].toString());
+                        summoner_basic_info.setic(result["profileIconId"].toInt());
+                        summoner_basic_info.setid(result["id"].toLongLong());
+                        summoner_basic_info.setlv(result["id"].toLongLong());
+                        qDebug() << summoner_basic_info; */
 
                     }
                 } else {

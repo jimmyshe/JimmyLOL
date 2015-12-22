@@ -16,17 +16,17 @@ basic_info::~basic_info()
     delete summonername;
 }
 
-void basic_info::setid(const long &data)
+void basic_info::setid(long &data)
 {
     *summonerid = data;
 }
 
-long basic_info::id() const
+long basic_info::id()
 {
     return *summonerid;
 }
 
-void basic_info::setname(const QString &data)
+void basic_info::setname(QString data)
 {
     *summonername = data;
 }
@@ -36,28 +36,28 @@ QString basic_info::name()
     return *summonername;
 }
 
-void basic_info::setic(const long &data)
+void basic_info::setic(long &data)
 {
     *profileIconId = data;
 }
 
-long basic_info::ic() const
+long basic_info::ic()
 {
     return *profileIconId;
 }
 
-void basic_info::setilv(const long &data)
+void basic_info::setlv( long &data)
 {
     *summonerLevel = data;
 }
 
-long basic_info::lv() const
+long basic_info::lv()
 {
     return *summonerLevel;
 }
 
 
-QDebug operator <<(QDebug dbg,basic_info &b)
+QDebug operator <<(QDebug dbg,basic_info b)
 {
     dbg.nospace() << "("
                   << "Name: " << b.name() << "; "
